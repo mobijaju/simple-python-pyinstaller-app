@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python -m py_compile C:\EAI\jenkinsDev\simple-python-pyinstaller-app\sources\add2vals.py C:\EAI\jenkinsDev\simple-python-pyinstaller-app\sources\calc.py'
+                sh 'python -m py_compile C:\\EAI\\jenkinsDev\\simple-python-pyinstaller-app\\sources\add2vals.py C:\\EAI\jenkinsDev\\simple-python-pyinstaller-app\\sources\\calc.py'
             }
         }
         stage('Test') {
             steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml C:\EAI\jenkinsDev\simple-python-pyinstaller-app\sources\test_calc.py'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml C:\\EAI\\jenkinsDev\simple-python-pyinstaller-app\sources\test_calc.py'
             }
             post {
                 always {
