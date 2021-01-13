@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml C:\\EAI\\jenkinsDev\simple-python-pyinstaller-app\sources\test_calc.py'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml C:\\EAI\\jenkinsDev\\simple-python-pyinstaller-app\\sources\\test_calc.py'
             }
             post {
                 always {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'pyinstaller --onefile C:\EAI\jenkinsDev\simple-python-pyinstaller-app\sources\add2vals.py'
+                sh 'pyinstaller --onefile C:\\EAI\\jenkinsDev\\simple-python-pyinstaller-app\\sources\\add2vals.py'
             }
             post {
                 success {
